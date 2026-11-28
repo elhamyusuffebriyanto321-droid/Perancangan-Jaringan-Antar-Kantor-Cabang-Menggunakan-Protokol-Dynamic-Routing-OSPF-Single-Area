@@ -1,0 +1,10 @@
+DI PUTTY
+sys id set name=R4
+tool romon set enable=yes
+ip address add address=30.30.30.2/24 interface=ether1
+ip address add address=192.168.30.1/24 inetrface=ether2
+ip address add address=192.168.30.2/24 inetrface=ether3
+
+routing ospf area add name=area-2 area-id=0.0.0.2
+routing ospf network add network=30.30.30.0/24 area=area-2
+routing ospf network add network=192.168.30.0/24 area=area-2
