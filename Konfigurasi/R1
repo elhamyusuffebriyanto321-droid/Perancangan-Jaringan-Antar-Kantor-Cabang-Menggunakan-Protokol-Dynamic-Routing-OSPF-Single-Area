@@ -1,1 +1,6 @@
-jdjd
+DI PUTTY
+sys id set name=R1
+ip dhcp-client add interface=ether1 enabled=no
+tool romon set enable=yes
+ip address add address=10.10.10.1/24 interface=ether2
+routing ospf network add network=10.10.10.0 area=backbone
